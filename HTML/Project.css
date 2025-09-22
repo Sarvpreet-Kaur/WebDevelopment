@@ -1,0 +1,17 @@
+table {
+    border-spacing: 5px; /* Adjust the space between individual cell borders */
+    border:1px solid black; /* Remove the outer border */
+}
+
+th, td {
+    border: 1px solid black; /* Apply border to each individual cell */
+    padding: 8px;
+    text-align: center;
+}
+
+caption{
+    border:1px solid black;
+    border-collapse: collapse;
+    padding: 1rem;
+    margin:2px
+}

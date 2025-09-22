@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .subscribe {
+            background-color: rgba(206, 7, 7, 0.881);
+            color: white;
+            border: none;
+            /*top right bottom left*/
+            padding: 10px 20px 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-right: 5px;
+            transition: background-color 0.15s;
+            vertical-align: top;
+        }
+        .subscribe:hover{
+            opacity: 0.8;
+        }
+        .subscribe:active{
+            opacity: 0.5;
+        }
+        .join{
+            background-color: white;
+            color: rgb(13, 157, 197);
+            /*height: 35px;
+            width: 70px;*/
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 8.5px;
+            padding-bottom: 8.5px;
+            cursor: pointer;
+            border-color: rgb(15, 147, 184) ;
+            border-radius: 3px;
+            border-style: solid;
+            margin-right: 5px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .join:hover{
+            background-color:  rgb(13, 157, 197);
+            color: white;
+        }
+        .join:active{
+            opacity: 0.7;
+        }
+        .tweet{
+            background-color: rgb(16, 148, 193);
+            color: white;
+            padding: 10px 20px 10px 20px;
+            border-color: rgb(16, 148,193);
+            border-style: solid;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+            vertical-align: top;
+            
+        }
+        .tweet:hover{
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .tweet:active{
+            opacity:0.7;
+        }
+        .stretch{
+            background-color: rgb(78, 192, 7);
+            color: white;
+            border: none;
+            padding: 10px 20px 10px 20px;
+            transition: padding 0.5s;
+        }
+        .stretch:hover{
+            padding: 20px 30px 20px 30px;
+            cursor: pointer;
+        }
+        .shadow{
+            background-color: rgb(78, 192, 7);
+            color: white;
+            border: none;
+            padding: 10px 20px 10px 20px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+            transition: padding 0.3s;
+        }
+        .shadow:active{
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+        .num{
+            background-color: rgb(78, 192, 7);
+            color: white;
+            border: none;
+            padding: 8px 20px 8px 20px;
+            transition: padding 0.3s;
+        }
+        .num:hover{
+            padding: 8px 30px 8px 30px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="subscribe">SUBSCRIBE</button>
+    <button class = "join">JOIN MY CHANNEL</button>
+    <button class = "tweet">TWEET</button>
+
+    <br><br>
+
+    <button class = "stretch">Stretch</button>
+    <br><br>
+    <button class = "shadow">Shadow</button>
+    <br><br>
+    <button class="num">One</button>
+    <button class="num">Two</button>
+    <button class="num">Three</button>
+</body>
+</html>

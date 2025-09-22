@@ -1,0 +1,14 @@
+a {
+    color: rgb(242, 8, 8); /* Default link color */
+}
+a:visited {
+    color: rgb(221, 128, 14); /* Visited link color */
+}
+a:hover {
+    color: rgb(5, 149, 134); /* Hover color */
+}
+table,tr,td,th,caption{
+    border:1px solid #eee;
+    border-collapse: collapse;
+    padding: 1rem;
+}

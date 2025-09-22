@@ -1,0 +1,28 @@
+.box{
+    width: 150px;
+    height: 150px;
+    font-size: 8em;
+    text-align: center;
+    border-radius: 20px;
+}
+#box1{
+    align-self: center;
+    background-color: bisque;
+}
+#box2{
+    align-self: end;
+    background-color: lightblue;
+}
+#box3{
+    background-color: lightcoral;
+    order: -1;
+}
+#box4{
+    background-color: rgb(248, 178, 151);
+    align-self: center;
+}
+.container{
+    display: flex;
+    border: 10px solid black;
+    height: 90vh;
+}

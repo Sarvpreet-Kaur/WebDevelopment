@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOMATO</title>
+    <link rel = "styleSheet" href="style.css">
+</head>
+<body>
+    <div id = "head">
+        <button id = "Filters">Filters</button>
+        <button id = "Offers">Offers</button>
+        <button id = "Rating">Rating</button>
+        <button id = "Alcohol">Alcohol</button>
+        <button id = "Open">Open Now</button>
+    </div>
+
+    <!-- Filter Options -->
+    <div id = "filterPopup" class = "hidden">
+        <h3>Choose Filter</h3>
+        <div class = "filterOptions">
+            <input type = "radio" id = "sortByRating" name ="filterOptions" value = "rating">
+            <label for = "sortByRating">Sort by Rating</label>
+        </div>
+        <div class = "filterOptions">
+            <input type = "radio" id = "sortHighToLow" name ="filterOptions" value = "highLow">
+            <label for = "sortHighToLow">High to Low(price)</label>
+        </div>
+        <div class = "filterOptions">
+            <input type = "radio" id = "costOption" name ="filterOptions" value = "costLowHigh">
+            <label for = "costOption">Cost: Low to High</label>
+        </div>
+        <div class = "filterOptions">
+            <input type = "radio" id = "distanceOption" name ="filterOptions" value = "distance">
+            <label for = "distanceOption">Distance</label>
+        </div>
+
+        <button id = "applyFilter">Apply</button>
+        <button id = "closeFilter">Close</button>
+    </div>
+
+    <!-- Insert all cards here -->
+    <div id = "root"></div>
+    <script src = "app.js"></script>
+</body>
+</html>

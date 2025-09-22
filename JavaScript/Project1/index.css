@@ -1,0 +1,7 @@
+.first{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.curr{
+    font-size: 25px;
+}

@@ -1,0 +1,31 @@
+body{
+    margin:0;
+}
+.box{
+    width: 150px;
+    height: 150px;
+    border: 5px solid;
+    font-size: 5em;
+    text-align: center;
+    
+    transform: translate(200px,200px) rotate(45deg) scale(0.9);
+}
+#box1{
+    background-color: blanchedalmond;
+}
+#box2{
+    background-color: lightcoral;
+}
+#box3{
+    background-color: lightgoldenrodyellow;
+}
+#img1{
+    transform: translate(200px,-60px) rotateZ(-10deg);
+    border-radius: 20px;
+    border:5px solid 
+}
+#img2{
+    transform: translate(400px,100px) rotateZ(-10deg);
+    border-radius: 20px;
+    border:5px solid 
+}

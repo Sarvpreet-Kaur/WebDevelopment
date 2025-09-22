@@ -1,0 +1,61 @@
+body{
+    font-size: 20px;
+}
+/* div{
+    border:2px solid;
+    height:50px;
+    margin-bottom: 100px;
+} */
+#overflowing1{
+    overflow: visible;
+}
+#overflowing2{
+    overflow: hidden;
+}
+#overflowing3{
+    overflow: clip;
+    overflow-clip-margin: 20px;
+}
+#overflowing4{
+    overflow:scroll;
+}
+#overflowing5{
+    overflow: auto;
+}
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: sticky;
+    top:100px;
+    left: 300px;
+    right: 0px;
+    /* top: 100px; pushed down */
+}
+#boxinner{
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:50px;
+    left:50px;
+}
+.Pagination{
+    text-align: center;
+
+}
+.Pagination a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+.Pagination a.active{
+    background-color: rgb(56, 236, 176);
+    font-weight: bold;
+    border-radius: 10px;
+}
+.Pagination a:hover:not(.active){
+    background-color: rgb(168, 167, 167);
+    border-radius: 10px;
+}

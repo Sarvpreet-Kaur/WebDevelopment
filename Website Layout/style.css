@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+}
+header{
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px;
+}
+.navbar{
+    background-color: lightcoral;
+    height: 50px;
+}
+aside{
+    width: 20%;
+    float: left;
+    padding: 10px;
+}
+section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+article{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+footer{
+    display: block;
+    clear: both;
+    background-color: lightblue;
+    text-align: center;
+    padding: 30px;
+}
+.gallery{
+    display: inline-block;
+    border: 1px solid darkgrey;
+    margin: 5px;
+}
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+.gallery:hover{
+    border: 1px solid lightcoral;
+}
+i{
+    color: rgb(237, 134, 9);
+    text-align: center;
+}
+@media screen and (max-width:600px) {
+    /* if max-width: is less than 600 then this css will be followed - responsive css; */
+    aside,section,article{
+        width:100%;
+    }
+}

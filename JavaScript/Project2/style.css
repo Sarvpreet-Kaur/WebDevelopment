@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(254, 241, 219);
+    color: rgb(246, 120, 162);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    text-align: center;
+    background: rgb(23, 23, 1);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(105, 6, 22);
+}
+
+h1{
+    margin-bottom: 20px;
+    color:  rgb(246, 120, 162) ;
+}
+
+.quote-box{
+    margin:20px 0px;
+    padding: 20px;
+    font-style: italic;
+    background-color: rgb(42, 42, 15);
+    border-radius: 5px;
+    border-left: 5px solid rgb(97, 97, 241);
+}
+
+button{
+    background-color : rgb(42, 42, 15);
+    padding: 10px 8px 10px 8px;
+    color: rgb(232, 158, 158);
+    font-weight: bolder;
+    border: none;
+    border: 2px solid black;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 7px;
+    
+}
+button:hover{
+    background-color: rgb(37, 37, 35);
+}

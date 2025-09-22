@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.form-container{
+    background-color: beige;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1{
+    text-align: center;
+}
+#first{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#second{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#third{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button{
+    background-color:lightblue;
+    width: 100%;
+    border: 2px solid black;
+    margin-top: 10px;
+    padding: 5px 10px;
+}

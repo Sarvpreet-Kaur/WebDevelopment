@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        var calc = function(fx,a,b){
+            return fx(a,b);
+        }
+
+        var sum = function(a,b){
+            return a+b;
+        }
+
+        var diff = function(a,b){
+            return a-b;
+        }
+
+        var prod = function(a,b){
+            return a*b;
+        }
+
+        console.log(calc(sum,5,5));
+        console.log(calc(diff,5,5));
+        console.log(calc(prod,5,5));
+        
+    </script>
+    
+</body>
+</html>
