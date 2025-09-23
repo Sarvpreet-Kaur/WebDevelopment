@@ -1,4 +1,5 @@
 const element = React.createElement("h1", {}, "Hello");
+const element2 = React.createElement("h1", {}, "Hello");
 /*
 This works only till React 17 the main disadvantage of this
 is that whenever thee is a heavy website if we are on any 1 event 
@@ -14,3 +15,8 @@ which gives faster responses and quick responses
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(element);
 
+/* using render in react it replace the previous children and replaces it with the new one
+*/
+
+const div1 = React.createElement('div', {}, [element, element2]);
+root.render(div1);
