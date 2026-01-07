@@ -35,6 +35,11 @@ const olympic = new Date("2028-07-14T00:00:00");
 
 const diff = olympic - neeDate;
 
+//1000 - converted to sec
+//60 - converted to min
+//60 - converted to hours
+//24 - converted to days
+
 const days = Math.floor(diff/(1000*60*60*24));
 console.log("Days", Math.floor(days))
 

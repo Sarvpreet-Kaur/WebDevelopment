@@ -61,11 +61,11 @@ console.log(Object.entries(obj1));
 const obj0 = {a:1, b:2};
 const obj2 = {c:3, d:4};
 
-//We give empty because the first parameter stores the answer and the next the elements to be combined
-//Therefore if we do not give empty it will also change in obj0
+//We give empty {} because the first parameter stores the answer and the next the elements to be combined
+//Therefore if we do not give empty it will also change in object obj0
 //Hence empty is given 
 
-//It gives a copy
+//To generate a copy
 const obj3 = Object.assign({}, obj0, obj2);
 console.log(obj3);
 
@@ -89,6 +89,8 @@ console.log(user.address.city);
 const usercopy = Object.assign({}, user);
 console.log(usercopy);
 
+//deep copy for objects
+//shallow copy for nested objects
 usercopy.name = "Rihu";
 usercopy.address.pincode = 208090;
 
@@ -120,7 +122,8 @@ const obj6 = {
 Object.seal(obj6);
 console.log(obj6);
 
-//Do not changes anything
+//Seal - modification is allowed
+//but add or delete is not permitted
 obj6.a = 3;
 console.log(obj6);
 
@@ -165,3 +168,7 @@ console.log(arr.__proto__ == Array.prototype);
 console.log(Array.prototype.__proto__ == Object.prototype);
 console.log(arr.__proto__.__proto__ == Object.prototype);
 console.log(arr.__proto__.__proto__.__proto__ == null);
+
+console.log(Array.prototype)
+console.log(Object.prototype)
+console.log(arr1.__proto__)

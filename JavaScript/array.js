@@ -84,7 +84,7 @@ console.log(b);
 
 
 arr = [2, 3, 4, 5, 6, 6, 7];
-const[fir, sec, , , fo] = arr;
+const[fir, sec, , ,,, fo] = arr;
 console.log(fir, sec, fo);
 
 const[f, s, ...t] = arr;
