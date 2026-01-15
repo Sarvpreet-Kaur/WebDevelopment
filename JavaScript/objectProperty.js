@@ -101,7 +101,7 @@ for (const key in child) {
     if (child.hasOwnProperty(key)) {
         console.log(`Own property: ${key}`); // Output: Own property: ownProp
     } else {
-        console.log(`Inherited property: ${key}`); // Output: Inherited property: inheritedProp
+        console.log(`Inherited property: ${key}`); // Output: Inherited property: inheritedProp, Inherited property: toString(as it is also inherited from Object and visible due to enumeration:true)
     }
 }
 
