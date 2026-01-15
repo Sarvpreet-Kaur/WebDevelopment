@@ -89,7 +89,7 @@
 //     },5000);
 // });
 
-// p1.then((response)=>console.loh(response));
+// p1.then((response)=>console.log(response));
 
 
 //Will print together as the promise is resolved

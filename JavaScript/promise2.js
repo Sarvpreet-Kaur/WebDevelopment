@@ -55,7 +55,7 @@ function PlaceOrder(cart){
 
     const pr = new Promise(function(resolve, reject){
         setTimeout(()=>{
-            const foodAvail = false;
+            const foodAvail = true;
             if(foodAvail) {
                 console.log("Order Placed successfully");
                 const order = {orderId: 123, food: cart, restaurant: "Donimooo", location: "Knp"};

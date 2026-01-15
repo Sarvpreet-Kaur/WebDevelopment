@@ -36,6 +36,7 @@ const root = document.getElementById('root');
 
 root.addEventListener('click', (event)=>{
     console.log(event.target);
+    //getComputedStyle - get the css of current element and .backgroundColor - extracting its bg
     col  = window.getComputedStyle(event.target).backgroundColor;
     console.log(col);
 
