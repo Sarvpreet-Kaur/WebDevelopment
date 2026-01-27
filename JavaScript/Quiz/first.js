@@ -229,11 +229,12 @@ for(let i=0; i<5; i++){
     const ind = Math.floor(Math.random()*length);
     ques.push(questions[ind]);
 
+    //Pushes the recently chosen question to last so that the len shrinks and same questions are not selected again
     [questions[ind],questions[length-1]] = [questions[length-1], questions[ind]];
     length--;
 }
-//Form the div class
 
+//Form the div class
 ques.forEach((obj, index)=>{
     const divEle = document.createElement('div');
     divEle.className = 'question';
@@ -284,6 +285,8 @@ form.appendChild(out);
 
 form.addEventListener('submit', (event)=>{
     event.preventDefault();
+
+    //Collect all data from form
     const data= new FormData(form);
 
     let result = 0;

@@ -34,7 +34,7 @@ const form = document.querySelector('form');
 //     //Prints  its current value
 // });
 
-//blur - do not bubbles, focusout - bubbles
+// blur - do not bubbles, focusout - bubbles
 // form.addEventListener('focusout', (event)=>{
 //     console.log(event.target.value);
 //     //when focus shifts from curr element to other then prev. one gets present
@@ -66,9 +66,10 @@ const form = document.querySelector('form');
 // });
 
 form.addEventListener('submit', ()=>{
-    const data = new FormData(from);
+    
+    const data = new FormData(form);
 
     for(let [key, val] of data.entries()){
-        console.log(key, value);
+        console.log(key, val);
     }
 });
