@@ -1,0 +1,2 @@
+Hello this is Reet.
+I am working on different projects and currently implementing Agentic AI from scratch 
