@@ -1,0 +1,29 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.first {
+  text-align: center;
+  background-color: bisque;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+}
+
+button {
+  background-color: #f06998;
+  height: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+/*# sourceMappingURL=Hooks.3a01df49.css.map */
