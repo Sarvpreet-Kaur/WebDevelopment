@@ -26,8 +26,9 @@ const Style = {
     color:" #b8e1a9"
 };
 const name = "Reet";
+y
 // const newelement = (
-//     <>
+//     <> -> wrapping up in a single object with no extra div
 //         <h1 id = "first" className="h1first">Hello World {name}</h1>
 //         <h2 id = "second" style={Style}>I am good {obj.age}</h2>
 //     </>
