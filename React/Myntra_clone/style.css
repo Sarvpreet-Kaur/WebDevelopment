@@ -50,3 +50,10 @@ body{
     color: white;
     margin-left: 40px;
 }
+
+button{
+    height: 50px;
+    background-color: bisque;
+    width: 200px;
+    margin-left: 10px;
+}
