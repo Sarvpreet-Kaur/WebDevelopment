@@ -1,0 +1,32 @@
+body{
+    margin:0px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    background-color: black;
+    color: bisque;
+}
+
+#root{
+    width: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+button{
+    height: 50px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+.counter{
+    height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
