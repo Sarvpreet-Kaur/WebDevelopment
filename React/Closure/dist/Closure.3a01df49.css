@@ -1,0 +1,23 @@
+body {
+  box-sizing: border-box;
+  background-color: #e6d6f3;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#root {
+  text-align: center;
+  background-color: #e0b0ff;
+  border: 2px solid #f7f7f7;
+  width: 500px;
+  padding: 20px 10px;
+}
+
+.second {
+  font-size: 19px;
+}
+/*# sourceMappingURL=Closure.3a01df49.css.map */

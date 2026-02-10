@@ -1,0 +1,23 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6d6f3;
+}
+
+#root{
+    width: 500px;
+    padding: 20px 10px;
+    background-color: #E0B0FF;
+    text-align: center;
+    border: 2px solid #f7f7f7;
+    
+}
+
+.second{
+    font-size: 19px;
+}
