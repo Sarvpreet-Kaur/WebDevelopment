@@ -734,13 +734,56 @@ function PasswordGenerator() {
     const [length, setLength] = (0, _react.useState)(7);
     const [numChange, setNumChange] = (0, _react.useState)(false);
     const [charChange, setCharChange] = (0, _react.useState)(false);
+    //Optimization
+    //Memory will be allocated again and again whenever we re-render after setPassword is called,
+    //when setPassword is called there is no need to allocate for this function generatePassword
+    // it will only be called when length, numChange, charChange are changed 
+    //It is a closure as its previous referenced memory is used, it is re render only when its dependencies changes
+    const generatePassword = (0, _react.useCallback)(()=>{
+        let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        if (numChange) str += "1234567890";
+        if (charChange) str += "!@#$%^&*(){}+_-";
+        let pass = "";
+        for(let i = 0; i < length; i++)pass += str[Math.floor(Math.random() * str.length)];
+        setPassword(pass);
+    }, [
+        length,
+        numChange,
+        charChange
+    ]);
+    // function generatePassword(){
+    //     let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    //     if(numChange){
+    //         str += "1234567890"
+    //     }
+    //     if(charChange){
+    //         str += "!@#$%^&*(){}+_-"
+    //     }
+    //     let pass = "";
+    //     for(let i=0; i<length; i++){
+    //         pass += str[Math.floor(Math.random()*str.length)]
+    //     }
+    //     setPassword(pass);
+    // }
+    // goes to infinite loop - when setPassword is called it will re render again therefore generatePassword will be called again and again 
+    // therefore sets to infinite loop 
+    // generatePassword();
+    //only changes when there is any change in dependency array
+    // useEffect(()=>{
+    //     generatePassword()
+    // }, [length, numChange, charChange])
+    (0, _react.useEffect)(()=>{
+        generatePassword();
+    }, [
+        generatePassword
+    ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 children: password
             }, void 0, false, {
                 fileName: "main.js",
-                lineNumber: 12,
+                lineNumber: 64,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -754,7 +797,7 @@ function PasswordGenerator() {
                         onChange: (e)=>setLength(e.target.value)
                     }, void 0, false, {
                         fileName: "main.js",
-                        lineNumber: 14,
+                        lineNumber: 66,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -765,7 +808,7 @@ function PasswordGenerator() {
                         ]
                     }, void 0, true, {
                         fileName: "main.js",
-                        lineNumber: 15,
+                        lineNumber: 67,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -774,14 +817,14 @@ function PasswordGenerator() {
                         onChange: ()=>setNumChange(!numChange)
                     }, void 0, false, {
                         fileName: "main.js",
-                        lineNumber: 17,
+                        lineNumber: 69,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                         children: "Number"
                     }, void 0, false, {
                         fileName: "main.js",
-                        lineNumber: 18,
+                        lineNumber: 70,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -790,31 +833,31 @@ function PasswordGenerator() {
                         onChange: ()=>setCharChange(!charChange)
                     }, void 0, false, {
                         fileName: "main.js",
-                        lineNumber: 20,
+                        lineNumber: 72,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                         children: "Characters"
                     }, void 0, false, {
                         fileName: "main.js",
-                        lineNumber: 21,
+                        lineNumber: 73,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "main.js",
-                lineNumber: 13,
+                lineNumber: 65,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true);
 }
-_s(PasswordGenerator, "+P3O/GK4OUWAgBKaveJqRxSJtkw=");
+_s(PasswordGenerator, "8nd7mlXPJJ62eR5OQVJyuPOxe28=");
 _c = PasswordGenerator;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PasswordGenerator, {}, void 0, false, {
     fileName: "main.js",
-    lineNumber: 27,
+    lineNumber: 79,
     columnNumber: 13
 }, undefined));
 var _c;
