@@ -52,6 +52,7 @@ export default function Body() {
     useCallback(()=>{fetchInfoName(name)}, [name])
 
     useEffect(()=>{
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         fetchInfoCount(10);
     }, []);
 
