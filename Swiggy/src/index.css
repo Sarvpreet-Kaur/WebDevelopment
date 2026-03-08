@@ -12,12 +12,12 @@
 .shimmer::after {
   content: "";
   position: absolute;
-  top: -150%;
+  top: 0;
   left: -150%;
   width: 200%;
   height: 200%;
   background: linear-gradient(
-    45deg,
+    90deg,
     transparent,
     rgba(255,255,255,0.5),
     transparent
@@ -27,7 +27,6 @@
 
 @keyframes shimmer {
   100% {
-    top: 150%;
     left: 150%;
   }
 }

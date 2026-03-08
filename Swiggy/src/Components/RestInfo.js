@@ -1,4 +1,27 @@
+import { useDispatch, useSelector } from "react-redux"
+import {addItem, IncrementItem, DecrementItem} from "../Store/cartSlicer" 
+
+
 export default function RestInfo({restData}){
+
+    const dispatch = useDispatch();
+    const items = useSelector(state => state.cartSlice.items)
+
+    const ele = items.find(item=>item.id === restData.id)
+    const count = ele?ele.quantity: 0;
+
+    function handleAddItems(){
+        dispatch(addItem(restData))
+    }
+
+    function handleIncrementItems(){
+        dispatch(IncrementItem(restData))
+    }
+
+    function handleDecrementItems(){
+        dispatch(DecrementItem(restData))
+    }
+
     return(
         <>
         <div className="flex w-full justify-between mb-2 pb-2">
@@ -23,7 +46,18 @@ export default function RestInfo({restData}){
             </div>
             <div className="w-[20%] relative">
                 <img className="w-full h-26 object-cover rounded-3xl" src={"https://media-assets.swiggy.com/swiggy/image/upload/"+restData.imageId}></img>
-                <button className="absolute bottom-0.5 left-20 rounded-xl text-2xl text-green-600 px-6 py-2 shadow-md border border-white bg-white">ADD</button>
+
+                {
+                    (count==0)
+                    ? (<button className="absolute bottom-0.5 left-20 rounded-xl text-2xl text-green-600 px-6 py-2 shadow-md border border-white bg-white" onClick={()=>handleAddItems()}>ADD</button>)
+                    : (
+                        <div className="absolute bottom-0.5 left-20 rounded-xl flex gap-3 text-2xl text-green-600 px-6 py-2 shadow-md border border-white bg-white">
+                            <button onClick={()=>handleDecrementItems()}>-</button>
+                            <span>{count}</span>
+                            <button onClick={()=>handleIncrementItems()}>+</button>
+                        </div>
+                    )
+                }
             </div>
         </div>
         <hr className="mb-6 mt-2"></hr>
