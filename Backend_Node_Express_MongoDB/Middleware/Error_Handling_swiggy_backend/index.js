@@ -91,6 +91,58 @@ app.patch("/admin", Auth, (req, res)=>{
     res.status(200).send("Updated successfully")
 })
 
+// User functionalities
+app.post("/user/:id", (req, res)=>{
+    try{
+        const id = parseInt(req.params.id);
+        const foodItem = FoodMenu.find(item => item.id === id);
+
+        if(foodItem){
+            addToCart.push(foodItem)
+            res.status(200).send("Added to Cart")
+        }
+        else{
+            res.send("Out of Stock")
+        }
+    }
+    catch(error) {res.send("Error"+ err)}
+})
+
+app.delete("/user/:id", (req, res)=>{
+    try{
+        const id = parseInt(req.params.id)
+        const foodItem = FoodMenu.findIndex(item=> item.id === id)
+
+        if(foodItem!=-1){
+            addToCart.splice(foodItem, 1)
+            res.send("Removed from Cart")
+        }
+        else res.send("Not present in Cart")
+        
+    }catch(error) {res.send(error)}
+})
+
+app.get("/user", (req, res)=>{
+    try{
+        if(addToCart.length == 0){
+            res.send("Cart is Empty")
+        }
+        else res.send(addToCart)
+    }
+    catch(error){ res.send(error) }
+})
+
+//to throw any error
+// app.get("/dummy",(req,res)=>{
+//     try{
+//         // JSON.parse({"name":"Rohit"});
+//         throw new Error('BROKEN')
+//         res.send("Hello Coder");
+//     }
+//     catch(err){
+//         res.send("Some error Occured "+err);
+//     }
+// })
 app.listen(5000, ()=>{
     console.log("5000")
 })
