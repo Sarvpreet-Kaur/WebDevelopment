@@ -2,3 +2,4 @@ node_modules/
 Backend_Node_Express_MongoDB/MongoDB/url.js
 Backend_Node_Express_MongoDB/MongoDB/Mongoose/API_with_db/url.js
 Backend_Node_Express_MongoDB/MongoDB/Mongoose/DataValidation/url.js
+Backend_Node_Express_MongoDB/MongoDB/Mongoose/Authorization/.env
